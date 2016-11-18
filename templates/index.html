@@ -1,46 +1,28 @@
 {% extends '_base.html' %}
 
-{% block header_content %}
-<header>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h1>{{ COPY.content.project_name|smarty }}</h1>
-                <h2>{{ COPY.content.lorem_ipsum|smarty }}</h2>
-            </div>
-        </div>
-    </div>
-</header>
-{% endblock %}
-
-
 {% block content %}
-<section id="content">
-    <div class="container">
-        <div class="row">
-            <div id="main-content" class="col-md-8">
 
-                <h1>{{ COPY.content.project_name }}</h1>
-
-                <div id="story-meta">
-                    <p class="byline">by <span>{{ COPY.content.byline }}</span></p>
-                    <p class="dateblock">
-                        <span class="date">{{ COPY.content.pubdate }}</span>
-                        <span class="time"> {{ COPY.content.pubtime }}</span>
-                    </p>
-                </div>
-
-                <h2 class="knockout-example">Example COPY list</h2>
-                <dl>
-                    {% for row in COPY.example_list %}
-                    <dt>{{ row.term }}</dt><dd>{{ row.definition }}</dd>
-                    {% endfor %}
-                </dl>
-
-                <h2 class="knockout-example">JST example</h2>
-                <p id="template-example"></p>
-            </div>
+<!-- <div class="row image col-sm-12 ">
+    <img src="assets/bg-image.png" class="img-responsive">
+</div> -->
+<div class="container first">
+    <div class="row col-sm-12 header">
+        <div class="header-text">
+            <h1 class="text-left">{{ COPY.content.project_name }}</h1>
+            <p class="byline text-left">by {{ COPY.content.byline }} | published {{ COPY.content.pubdate }}<p>
         </div>
     </div>
-</section>
+</div>
+<div class="container timeline">
+    <div class="row">
+        <div class="intro col-sm-8 col-sm-offset-2">{{COPY.content.intro}}</div>
+    </div>
+    <div class="row">
+        {% for row in COPY.items%}
+            {% set loop_first = loop.first %}
+            {% include "%s.html" % (row.template) ignore missing %}
+        {% endfor %}
+    </div>
+</div>
+
 {% endblock %}

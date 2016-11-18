@@ -1,0 +1,7 @@
+{% extends '_default.html' %}
+
+{% block entrycontent %}
+	<span class="circle"></span>
+	{{row.date}}
+	{% if row.text %}<p>{{row.text}}</p>{% endif %}
+{% endblock %}

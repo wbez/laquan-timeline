@@ -1,0 +1,14 @@
+{% extends '_default.html' %}
+
+{% block gridclass %}
+	{% if row.grid %}
+        {{row.grid}}
+    {% else %}
+        {{ super() }}
+    {% endif %}
+{% endblock %}
+
+{% block entrycontent %}
+	<img src="assets/{{row.image}}" class="img-responsive" alt="Responsive image">
+	<p class="source">{{row.imagecaption}} ({{row.imagecredit}})</p>
+{% endblock %}

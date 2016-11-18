@@ -1,0 +1,6 @@
+{% extends '_default.html' %}
+
+{% block entrycontent %}
+	{%if row.name %}<div class="name">{{row.name}}, {{row.source}}</div>{% endif %}
+	<div class="text">{{row.text}}{% include "_soundcite.html" ignore missing %}{{row.audiotextend}}</div>
+{% endblock %}

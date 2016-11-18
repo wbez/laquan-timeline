@@ -54,3 +54,12 @@ www/live-data/*
 
 #Logs
 logs/*.log
+
+# Notes
+*.notes
+LaquanMcDonaldTimeline*
+copydoctest.py
+laquan.txt
+laquan_spreadsheet.csv
+www/font/MyFontsWebfontsKit.css
+www/font/webfonts*

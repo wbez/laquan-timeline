@@ -1,0 +1,14 @@
+{% extends '_default.html' %}
+
+{% block gridclass %}
+	{% if row.grid %}
+        {{row.grid}}
+    {% else %}
+        {{ super() }}
+    {% endif %}
+{% endblock %}
+
+{% block entrycontent %}
+	<div class="text">{{row.text}}</div>
+	{%if row.name %}<div class="source">&mdash; {{row.name}}, {{row.source}}</div>{% endif %}
+{% endblock %}

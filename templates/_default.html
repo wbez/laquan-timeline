@@ -1,0 +1,8 @@
+<div class="entry {% block gridclass %}col-sm-8 col-sm-offset-2{% endblock %} {% if loop_first %}firstitem{% endif %} {% if row.class %}{{row.class}}{% endif %}">
+	<div class="{% if row.class %}{{row.class}}{% endif %}">
+		{% block entrycontent %}
+		{%if row.name %}<div class="name">{{row.name}}, {{row.source}}</div>{% endif %}
+		<div class="text">{{row.text}}</div>
+		{% endblock %}
+	</div>
+</div>
