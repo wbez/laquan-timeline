@@ -8,8 +8,10 @@
 <div class="container first">
     <div class="row col-sm-12 header">
         <div class="header-text">
-            <h1 class="text-left">{{ COPY.content.project_name }}</h1>
-            <p class="byline text-left">by {{ COPY.content.byline }} | published {{ COPY.content.pubdate }}<p>
+            <h1 class="text-left">{{ COPY.content.headline }}</h1>
+            <h3 class="text-left">{{ COPY.content.headline2 }}</h3>
+            <p class="byline text-left">Reported by {{ COPY.content.byline }}</p>
+            <p class="byline">{{ COPY.content.pubdate }}<p>
         </div>
     </div>
 </div>
@@ -18,7 +20,7 @@
         <div class="intro col-sm-8 col-sm-offset-2">{{COPY.content.intro}}</div>
     </div>
     <div class="row">
-        {% for row in COPY.items%}
+        {% for row in COPY.test%}
             {% set loop_first = loop.first %}
             {% include "%s.html" % (row.template) ignore missing %}
         {% endfor %}

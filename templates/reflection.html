@@ -1,7 +1,8 @@
 {% extends '_default.html' %}
 
 {% block entrycontent %}
-{%if row.name %}<div class="name">{{row.name}}, {{row.source}}</div>{% endif %}
-{%if row.image %}<img src="{{row.image}}" alt="{{row.name}}" class="img-circle">{% endif %}
-<div class="text">{{row.text}}</div>
+	{%if row.name %}<div class="name">{{row.name}}, {{row.source}}</div>{% endif %}
+	{%if row.image %}<img src="{{row.image}}" alt="{{row.name}}" class="img-circle">{% endif %}
+	<div class="lookingback">Looking Back</div>
+	<div class="text">{{row.text}}</div>
 {% endblock %}

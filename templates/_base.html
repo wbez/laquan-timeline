@@ -21,6 +21,8 @@
     {% block extra_css %}{% endblock extra_css %}
     {{ CSS.render('css/rendered/app.min.css') }}
     <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+
 
     {% include '_social_tags.html' %}
 
@@ -73,7 +75,19 @@
     {% endblock content %}
 
     {% block footer %}
+        <footer>
+        <div class="primary">
+            <ul>
 
+            </ul>
+        </div>
+        <div class="secondary">
+            <p>&copy;2016 WBEZ</p>
+            <ul>
+                <li id="footerContact"><a href="http://www.wbez.org/contact">Contact</a></li>
+            </ul>
+        </div>
+    </footer>
     {% endblock footer %}
 
     {{ JS.push('js/lib/jquery.js') }}

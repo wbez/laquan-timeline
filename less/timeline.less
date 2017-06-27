@@ -22,7 +22,7 @@ body {
 		z-index: 0;
 		opacity: 1;
 		background-color: #fff;
-		background-image: url("../assets/laquan_video.jpg");
+		background-image: url("https://s3.amazonaws.com/wbez-assets/WBEZ-Graphics/laquan-timeline/laquan_video.jpg");
 		background-size:100%;
 		background-repeat: no-repeat;
 		-webkit-background-size: cover;
@@ -92,6 +92,10 @@ p {
 	font-family: 'Source Sans Pro', sans-serif;
 }
 
+a {
+	color:#EC0101;
+}
+
 .intro {
 	margin-top: 15px;
 	margin-bottom: 15px;
@@ -106,7 +110,7 @@ p {
 }
 
 p.source {
-	padding: 0px 15px 10px 15px;
+	padding: 5px 15px 10px 15px;
 	font-style: italic;
 	font-size: 12px;
 	margin: 0;
@@ -124,7 +128,7 @@ p.source {
 .entry {
 	border-left: 3px solid #EC0101;
 	position: relative;
-	padding-bottom: 10px;
+	padding-bottom: 20px;
 
 	&.date {
 		padding-bottom: 0;
@@ -163,21 +167,36 @@ p.source {
 	}
 
 	.link {
-		background: #72A2A9;
+		background: #f5f5f5;
 		border-radius: 3px;
-		border: 2px solid #5C8E96;
+		border: 2px solid #e5e5e5;
 		padding: 2px 5px;
-
-		a {
-			color:#fff;
-		}
 	}
 
 	.reflection {
-		border: 2px solid #888B90;
-		background:#f5f5f5;
-		border-radius: 3px;
-		padding: 2px 5px;
+	    background: #333;
+	    border-radius: 3px;
+	    padding: 1.5em 1em 1em 1em;
+	    font-size: 1em;
+	    line-height: 2em;
+	    color: #fff;
+
+	    p {
+			font-family: "Georgia", serif;
+	    }
+
+	    .lookingback {
+	    	position: absolute;
+	    	top:0;
+	    	left:16px;
+	    	font-family: 'Source Sans Pro', sans-serif;
+	    	background: #e10101;
+	    	padding: 0 5px;
+	    	font-size: 14px;
+	    	border-radius: 3px;
+	    	line-height: 1.5em;
+	    	text-transform: uppercase;
+	    }
 	}
 }
 .audio {
@@ -264,11 +283,17 @@ p.source {
 	.img-responsive {
 	}
 
+	.entry .date {
+		margin: 0px 0px 10px -15px;
+	}
+
 	.entry.photo {
 		border:none;
 
 		.img-responsive {
 			max-height: 100vh;
+			padding: 5px;
+    		border: 2px solid #EC0101;
 		}
 	}
 
